@@ -1,0 +1,4 @@
+# Project exclude paths
+/evCache/target/
+/guavademo/target/
+/redis/target/
