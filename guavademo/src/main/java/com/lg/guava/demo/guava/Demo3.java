@@ -60,7 +60,9 @@ public class Demo3 {
                      加附加的功能
                  */
                                 //等同于expire  ttl  缓存中对象的生命周期就是3秒
-                .maximumSize(3).expireAfterWrite(3, TimeUnit.SECONDS)
+//                .maximumSize(3).expireAfterWrite(3, TimeUnit.SECONDS)
+                //三秒没访问被删除
+                .maximumSize(3).expireAfterAccess(3, TimeUnit.SECONDS)
                 .build(new CacheLoader<String, Object>() {
 
             //读取数据源
